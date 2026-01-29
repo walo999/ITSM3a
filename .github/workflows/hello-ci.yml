@@ -1,0 +1,17 @@
+name: Hello CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Say hello
+        run: echo "GitHub Actions działa – Hello CI!"
